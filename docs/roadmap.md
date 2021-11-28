@@ -19,6 +19,7 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
 | Extend with Log Analytics | `infra`, `monitoring` | Log Analytics workspaces could retrive monitoring data from more than Application Insights. We should propose ARM Templates to let applications or storage resources send more data. |
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
+| Migrate to vue.js v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate our applications as soon as vuetify supports it. |
 
 ### 2021 Q4
 
