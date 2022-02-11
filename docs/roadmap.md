@@ -14,7 +14,6 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
-| Support CosmosDB databases | `infra`, `storage`, `core` | CosmosDB is a common solution for NOSQL storage, with automatic scalability and redundancy. We should propose ARM Templates and Core helpers to help developers use this kind of resource, and implement it in at least one sample project. |
 | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more custom alternatives. |
 | Use AAD B2C for authentication | `infra`, `auth`, `security` | Azure AD B2C let applications centralize their user information and authentication pages, in a secured and compliant way. We should use this way in all our applications, coupled with API Management and Azure Functions. |
 | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
@@ -29,6 +28,7 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
 | ✔️ | Migrate to .NET 6, Functions v4 | `csharp`, `infra`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| ✔️ | Support CosmosDB databases | `infra`, `storage`, `core` | CosmosDB is a common solution for NOSQL storage, with automatic scalability and redundancy. We should propose ARM Templates and Core helpers to help developers use this kind of resource, and implement it in at least one sample project. |
 | 🔜 | Separate trips from *milochau.com* | `infra`, `microservices`, `business` | Trips are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `trips` application as an Azure Functions / Static Web Apps module. |
 | | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
 
