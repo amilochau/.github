@@ -10,7 +10,7 @@ This page presents the public roadmap for the `amilochau` organization. The foll
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2022 Q2+
+### 2022 Q3+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
@@ -18,18 +18,18 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
 | Extend with Log Analytics | `infra`, `monitoring` | Log Analytics workspaces could retrieve monitoring data from more than Application Insights. We should propose ARM Templates to let applications or storage resources send more data. |
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
-| Use vite.js | `devops`, `vue` | vue.js projects now commonly use vite.js to improve build. We should use this library as soon as our projects use vue.js v3. |
 | Create and deploy a contact application | `business` | A *contact* application is needed to help people contact the organization members in a secured way. We should propose this application as a part of our portfolio. |
-| | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
+| Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
 
 ### 2022 Q2
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| 🔜 | Migrate to vue.js v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate our applications. |
-| 🔜 | Migrate to vuetify v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate our applications to use the next vuetify version. |
+| ✔️ | Migrate to vue.js v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our our applications. |
+| ✔️ | Use vite.js | `devops`, `vue` | vue.js projects now commonly use vite.js to improve build. We should use this library as soon as our projects use vue.js v3. |
+| ✔️ | Migrate to vuetify v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our applications to use the next vuetify version. |
+| ✔️ | Use AAD B2C for authentication | `infra`, `auth`, `security` | Azure AD B2C let applications centralize their user information and authentication pages, in a secured and compliant way. We should use this way in all our applications, coupled with API Management and Azure Functions. |
 | 🔜 | Separate trips from *milochau.com* | `infra`, `microservices`, `business` | Trips are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `trips` application as an Azure Functions / Static Web Apps module. |
-| Use AAD B2C for authentication | `infra`, `auth`, `security` | Azure AD B2C let applications centralize their user information and authentication pages, in a secured and compliant way. We should use this way in all our applications, coupled with API Management and Azure Functions. |
 
 ### 2022 Q1
 
