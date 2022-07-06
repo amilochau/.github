@@ -6,6 +6,48 @@ This page presents the public roadmap for the `amilochau` organization. The foll
 
 ---
 
+```mermaid
+gantt
+  title Roadmap
+  dateFormat YYYY-MM-DD
+  axisFormat %d/%m
+
+  section Frameworks
+  vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
+  vite.js         : done,       vite,       2022-04-01,               2022-05-01
+  vuetify v3      : active,     vuetify,    2022-04-01,               120d
+
+  section Microservices
+  maps            : done,       maps,       2022-04-01,               2022-06-26
+  contacts        : active,     contacts,   2022-06-27,               20d
+  finance         :             finance,    after contacts,           30d
+  operations      :             operations, after finance,            30d
+
+  section Infrastructure
+  AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
+  Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
+  drop SQL        : milestone,  sql,        after operations,         0d
+  drop Web apps   : milestone,  webapps,    after operations,         0d
+
+  section Business
+  emails tracking : active,     tracking,   2022-07-01,             10d
+
+  section Documentation
+  mermaid         : active,     mermaid,    2022-07-06,               5d
+```
+
+## Current quarter
+
+### 2022 Q3
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
+| | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
+| | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
+
+---
+
 ## Future quarters
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
@@ -20,14 +62,6 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
 
-### 2022 Q3
-
-| State | Title | Tags | Comment |
-| ----- | ----- | ---- | ------- |
-| 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
-| | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
-| | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
-
 ---
 
 ## Past quarters
@@ -38,9 +72,9 @@ These roadmap items have been delivered, as they are now implemented.
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Migrate to vue.js v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our our applications. |
+| ✔️ | Use vue.js v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our our applications. |
 | ✔️ | Use vite.js | `devops`, `vue` | vue.js projects now commonly use vite.js to improve build. We should use this library as soon as our projects use vue.js v3. |
-| ✔️ | Migrate to vuetify v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our applications to use the next vuetify version. |
+| ✔️ | Use vuetify v3 | `web`, `vue` | A new major version for vue.js has been released for a while. We should migrate at least one of our applications to use the next vuetify version. |
 | ✔️ | Use AAD B2C for authentication | `infra`, `auth`, `security` | Azure AD B2C let applications centralize their user information and authentication pages, in a secured and compliant way. We should use this way in all our applications, coupled with API Management and Azure Functions. |
 | ✔️ | Separate trips from *milochau.com* | `infra`, `microservices`, `business` | Trips are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `maps` application as an Azure Functions / Static Web Apps module. |
 | ✔️ | Optimize Cosmos DB performances | `infra`, `storage`, `performances` | Cosmos DB accounts are used with a consumption billing plan. We should now implement performance improvements (indexes, patch, model design). |
