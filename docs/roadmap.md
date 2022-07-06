@@ -6,6 +6,39 @@ This page presents the public roadmap for the `amilochau` organization. The foll
 
 ---
 
+```mermaid
+gantt
+  title Roadmap
+  dateFormat YYYY-MM-DD
+  axisFormat %d/%m
+
+  section Microservices
+  maps            : done,       maps,       2022-05-01,               2022-06-26
+  contacts        : active,     contacts,   2022-06-27,               20d
+  tracking        : active,       tracking,   2022-07-01,             10d
+  finance         :             finance,    after contacts,           30d
+  operations      :             operations, after finance,            30d
+
+  section Infrastructure
+  drop SQL        : milestone,  sql,        after operations
+  drop Web apps   : milestone,  webapps,    after operations
+
+  section Documentation
+  mermaid         : active,     mermaid,    2022-07-06,               10d
+```
+
+## Current quarter
+
+### 2022 Q3
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
+| | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
+| | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
+
+---
+
 ## Future quarters
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
@@ -19,14 +52,6 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Extend with Log Analytics | `infra`, `monitoring` | Log Analytics workspaces could retrieve monitoring data from more than Application Insights. We should propose ARM Templates to let applications or storage resources send more data. |
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
-
-### 2022 Q3
-
-| State | Title | Tags | Comment |
-| ----- | ----- | ---- | ------- |
-| 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
-| | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
-| | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
 
 ---
 
