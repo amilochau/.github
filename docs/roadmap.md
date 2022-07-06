@@ -15,7 +15,6 @@ gantt
   section Microservices
   maps            : done,       maps,       2022-05-01,               2022-06-26
   contacts        : active,     contacts,   2022-06-27,               20d
-  tracking        : active,       tracking,   2022-07-01,             10d
   finance         :             finance,    after contacts,           30d
   operations      :             operations, after finance,            30d
 
@@ -23,8 +22,11 @@ gantt
   drop SQL        : milestone,  sql,        after operations
   drop Web apps   : milestone,  webapps,    after operations
 
+  section Business
+  emails tracking : active,       tracking,   2022-07-01,             10d
+
   section Documentation
-  mermaid         : active,     mermaid,    2022-07-06,               10d
+  mermaid         : active,     mermaid,    2022-07-06,               5d
 ```
 
 ## Current quarter
