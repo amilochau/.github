@@ -12,18 +12,25 @@ gantt
   dateFormat YYYY-MM-DD
   axisFormat %d/%m
 
+  section Frameworks
+  vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
+  vite.js         : done,       vite,       2022-04-01,               2022-05-01
+  vuetify v3      : active,     vuetify,    2022-04-01,               120d
+
   section Microservices
-  maps            : done,       maps,       2022-05-01,               2022-06-26
+  maps            : done,       maps,       2022-04-01,               2022-06-26
   contacts        : active,     contacts,   2022-06-27,               20d
   finance         :             finance,    after contacts,           30d
   operations      :             operations, after finance,            30d
 
   section Infrastructure
-  drop SQL        : milestone,  sql,        after operations
-  drop Web apps   : milestone,  webapps,    after operations
+  AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
+  Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
+  drop SQL        : milestone,  sql,        after operations,         0d
+  drop Web apps   : milestone,  webapps,    after operations,         0d
 
   section Business
-  emails tracking : active,       tracking,   2022-07-01,             10d
+  emails tracking : active,     tracking,   2022-07-01,             10d
 
   section Documentation
   mermaid         : active,     mermaid,    2022-07-06,               5d
