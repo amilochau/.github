@@ -15,13 +15,13 @@ gantt
   section Frameworks
   vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
   vite.js         : done,       vite,       2022-04-01,               2022-05-01
-  vuetify v3      : active,     vuetify,    2022-04-01,               120d
+  vuetify v3      : active,     vuetify,    2022-04-01,               2022-09-01
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
-  contacts        : active,     contacts,   2022-06-27,               20d
+  contacts        : active,     contacts,   2022-06-27,               60d
   finance         :             finance,    after contacts,           30d
-  operations      :             operations, after finance,            30d
+  operations      :             operations, after finance,            60d
 
   section Infrastructure
   AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
@@ -30,7 +30,7 @@ gantt
   drop Web apps   : milestone,  webapps,    after operations,         0d
 
   section Business
-  emails tracking : active,     tracking,   2022-07-01,             10d
+  emails tracking : done,     tracking,   2022-07-01,             10d
 
   section Documentation
   mermaid         : active,     mermaid,    2022-07-06,               5d
