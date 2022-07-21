@@ -33,7 +33,7 @@ gantt
   emails tracking : done,     tracking,   2022-07-01,             10d
 
   section Documentation
-  mermaid         : active,     mermaid,    2022-07-06,               5d
+  mermaid         : active,     mermaid,    2022-07-06,               2022-08-01
 ```
 
 ## Current quarter
