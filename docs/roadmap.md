@@ -15,11 +15,11 @@ gantt
   section Frameworks
   vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
   vite.js         : done,       vite,       2022-04-01,               2022-05-01
-  vuetify v3      : active,     vuetify,    2022-04-01,               2022-09-01
+  vuetify v3      : active,     vuetify,    2022-04-01,               2022-10-01
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
-  contacts        : active,     contacts,   2022-06-27,               80d
+  contacts        : active,     contacts,   2022-08-16,               30d
   finance         :             finance,    after contacts,           30d
   operations      :             operations, after finance,            60d
 
@@ -32,7 +32,8 @@ gantt
   drop Web apps   : milestone,  webapps,    after operations,         0d
 
   section Business
-  emails tracking : done,     tracking,   2022-07-01,             10d
+  emails tracking : done,       tracking,   2022-07-01,               2022-07-10
+  maps sharing    : done,       sharing,    2022-07-15,               2022-08-01
 
   section Documentation
   mermaid         : done,     mermaid,    2022-07-06,               2022-07-13
