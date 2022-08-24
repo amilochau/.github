@@ -119,4 +119,4 @@ These roadmap items have been delivered, as they are now implemented.
 
 ## Prior roadmap
 
-The roadmap items before 2021 Q3 are tracked on the Azure DevOps organization, and have not been migrated here yet. See [this issue](https://github.com/amilochau/.github/issues/8) to subscribe on the migration progression.
+The roadmap items before 2021 Q3 are tracked on the Azure DevOps organization, and won't be migrated.
