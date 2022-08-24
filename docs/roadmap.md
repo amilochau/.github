@@ -19,13 +19,15 @@ gantt
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
-  contacts        : active,     contacts,   2022-06-27,               60d
+  contacts        : active,     contacts,   2022-06-27,               80d
   finance         :             finance,    after contacts,           30d
   operations      :             operations, after finance,            60d
 
   section Infrastructure
   AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
   Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
+  Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
+  Policy          : active,     policy,     2022-08-19,               10d
   drop SQL        : milestone,  sql,        after operations,         0d
   drop Web apps   : milestone,  webapps,    after operations,         0d
 
@@ -33,7 +35,7 @@ gantt
   emails tracking : done,     tracking,   2022-07-01,             10d
 
   section Documentation
-  mermaid         : active,     mermaid,    2022-07-06,               2022-08-01
+  mermaid         : done,     mermaid,    2022-07-06,               2022-07-13
 ```
 
 ## Current quarter
@@ -42,6 +44,8 @@ gantt
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
+| ✔️ | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
+| ✔️ | Extend with Workbooks | `infra`, `monitoring` | Log Analytics workspaces could be coupled with Azure Monitor to create monitoring correlations. We should propose ARM Templates to deploy Azure Workbooks with consolidated views on applications, resources and costs. |
 | 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
 | | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
 | | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
@@ -57,10 +61,11 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
 | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more custom alternatives. |
-| Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
-| Extend with Log Analytics | `infra`, `monitoring` | Log Analytics workspaces could retrieve monitoring data from more than Application Insights. We should propose ARM Templates to let applications or storage resources send more data. |
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
+| Use firewall on internal resources | `infra`, `security` | We should avoid public access on internal resources. Our databases are still protected; we should now protect other resources used for configuration, communication or storage. |
+| Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| Setup alerts on monitoring |`infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 
 ---
 
