@@ -24,15 +24,15 @@ gantt
   AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
   Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
   Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
-  Policy          : done,       policy,     2022-08-19,               2022-09-28
+  Policy          : done,       policy,     2022-08-19,               2022-08-28
   Docker          : active,     docker,     2022-09-19,               20d
 
   section Business
-  emails tracking : done,       tracking,   2022-07-01,               2022-07-10
-  maps sharing    : done,       sharing,    2022-07-15,               2022-08-01
+  Emails tracking : done,       tracking,   2022-07-01,               2022-07-10
+  Maps sharing    : done,       sharing,    2022-07-15,               2022-08-01
 
   section Documentation
-  mermaid         : done,     mermaid,    2022-07-06,               2022-07-13
+  Mermaid         : done,       mermaid,    2022-07-06,               2022-07-13
 ```
 
 ## Current quarter
