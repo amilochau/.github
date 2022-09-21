@@ -19,17 +19,13 @@ gantt
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
-  contacts        : active,     contacts,   2022-08-16,               30d
-  finance         :             finance,    after contacts,           30d
-  operations      :             operations, after finance,            60d
 
   section Infrastructure
   AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
   Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
   Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
-  Policy          : active,     policy,     2022-08-19,               10d
-  drop SQL        : milestone,  sql,        after operations,         0d
-  drop Web apps   : milestone,  webapps,    after operations,         0d
+  Policy          : done,       policy,     2022-08-19,               2022-09-28
+  Docker          : active,     docker,     2022-09-19,               20d
 
   section Business
   emails tracking : done,       tracking,   2022-07-01,               2022-07-10
@@ -47,9 +43,7 @@ gantt
 | ----- | ----- | ---- | ------- |
 | ✔️ | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
 | ✔️ | Extend with Workbooks | `infra`, `monitoring` | Log Analytics workspaces could be coupled with Azure Monitor to create monitoring correlations. We should propose ARM Templates to deploy Azure Workbooks with consolidated views on applications, resources and costs. |
-| 🔜 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
-| | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
-| | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
+| 🔜 | Use Docker for Back-End applications | `infra`, `devops` | With an increasing count of technologies, we should now use a common way to deploy our applications. Docker is a first solution, working with Azure. |
 
 ---
 
@@ -67,6 +61,10 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Use firewall on internal resources | `infra`, `security` | We should avoid public access on internal resources. Our databases are still protected; we should now protect other resources used for configuration, communication or storage. |
 | Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 | Setup alerts on monitoring |`infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
+| Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
+| Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
+| Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
+| Use resusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use resuable GitHub worklows, using our centralized GitHub Actions. |
 
 ---
 
