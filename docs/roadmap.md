@@ -15,7 +15,8 @@ gantt
   section Frameworks
   vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
   vite.js         : done,       vite,       2022-04-01,               2022-05-01
-  vuetify v3      : active,     vuetify,    2022-04-01,               2022-10-01
+  vuetify v3      : done,       vuetify,    2022-04-01,               2022-11-01
+  .NET 7          : active,     dotnet,     2022-11-15,               2022-12-01
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
@@ -25,7 +26,7 @@ gantt
   Cosmos perfs    : done,       cosmos,     2022-06-01,               2022-06-15
   Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
   Policy          : done,       policy,     2022-08-19,               2022-08-28
-  Docker          : active,     docker,     2022-09-19,               20d
+  Docker          : done,       docker,     2022-09-19,               2022-10-01
 
   section Business
   Emails tracking : done,       tracking,   2022-07-01,               2022-07-10
@@ -37,13 +38,11 @@ gantt
 
 ## Current quarter
 
-### 2022 Q3
+### 2022 Q4
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
-| ✔️ | Extend with Workbooks | `infra`, `monitoring` | Log Analytics workspaces could be coupled with Azure Monitor to create monitoring correlations. We should propose ARM Templates to deploy Azure Workbooks with consolidated views on applications, resources and costs. |
-| 🔜 | Use Docker for Back-End applications | `infra`, `devops` | With an increasing count of technologies, we should now use a common way to deploy our applications. Docker is a first solution, working with Azure. |
+| 🔜 | Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 
 ---
 
@@ -51,7 +50,7 @@ gantt
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2022 Q4+
+### 2023 1+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
@@ -59,7 +58,6 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
 | Use firewall on internal resources | `infra`, `security` | We should avoid public access on internal resources. Our databases are still protected; we should now protect other resources used for configuration, communication or storage. |
-| Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 | Setup alerts on monitoring |`infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
 | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as an Azure Functions / Static Web Apps module. |
@@ -71,6 +69,14 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 ## Past quarters
 
 These roadmap items have been delivered, as they are now implemented.
+
+### 2022 Q3
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| ✔️ | Support Azure Policy | `infra`, `devops`, `security` | Azure Policy let us define security and compliance rules on our Azure resources. We should propose ARM Templates, and a set of default rules. |
+| ✔️ | Extend with Workbooks | `infra`, `monitoring` | Log Analytics workspaces could be coupled with Azure Monitor to create monitoring correlations. We should propose ARM Templates to deploy Azure Workbooks with consolidated views on applications, resources and costs. |
+| ✔️ | Use Docker for Back-End applications | `infra`, `devops` | With an increasing count of technologies, we should now use a common way to deploy our applications. Docker is a first solution, working with Azure. |
 
 ### 2022 Q2
 
