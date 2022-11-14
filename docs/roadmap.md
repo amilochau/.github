@@ -16,10 +16,11 @@ gantt
   vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
   vite.js         : done,       vite,       2022-04-01,               2022-05-01
   vuetify v3      : done,       vuetify,    2022-04-01,               2022-11-01
-  .NET 7          : active,     dotnet,     2022-11-15,               2022-12-01
+  .NET 7          : active,     dotnet,     2022-11-05,               2022-12-01
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
+  core-vue3       : done,       corevue3,   2022-10-07,               2022-11-07
 
   section Infrastructure
   AAD B2C         : done,       aadb2c,     2022-05-01,               2022-06-01
@@ -27,6 +28,7 @@ gantt
   Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
   Policy          : done,       policy,     2022-08-19,               2022-08-28
   Docker          : done,       docker,     2022-09-19,               2022-10-01
+  Terraform       : active,     terraform,  2022-11-15,               2022-12-31
 
   section Business
   Emails tracking : done,       tracking,   2022-07-01,               2022-07-10
@@ -42,7 +44,9 @@ gantt
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
+| ✅ | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | 🔜 | Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| 🔜 | Use Terraform | `infra`, `devops` | ARM Templates are a good solution to automate Azure infrastructure, but we now use more providers. Terraform is a good candidate to automate more infrastructure. |
 
 ---
 
@@ -55,7 +59,6 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
 | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more custom alternatives. |
-| Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
 | Centralize health status | `infra`, `monitoring` | Each application exposes a health endpoint; we should now propose a consolidated API to present the health of our organization |
 | Use firewall on internal resources | `infra`, `security` | We should avoid public access on internal resources. Our databases are still protected; we should now protect other resources used for configuration, communication or storage. |
 | Setup alerts on monitoring |`infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
