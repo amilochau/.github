@@ -60,7 +60,7 @@ gantt
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2023 1+
+### 2023 Q1+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
