@@ -46,9 +46,11 @@ gantt
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✅ | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
-| ✅ | Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
-| ✅ | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
+| ✔️ | Propose vue.js template library | `web`, `core` | Our Front-End applications use a common set of features. We should create a dedicated Node.js (vue.js) library to expose these features. |
+| ✔️ | Migrate to .NET 7 | `csharp`, `core` | New versions for Microsoft-stack frameworks have been released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| ✔️ | Separate contacts from *milochau.com* | `infra`, `microservices`, `business` | Contacts are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `contacts` application as an Azure Functions / Static Web Apps module. |
+| ✔️ | Use AAD B2C custom policies | `infra`, `auth`, `security` | Azure AD B2C custom policies offer more control on authentication flows. We should use them, instead of pre-defined user flows, to improve our identity experience. |
+| ✔️ | Evaluate with WAF | `architecture`, `documentation` | We want to design high-available, resilient workloads. The Well-Architected Framework is a privileged way to evaluate and improve the current design. |
 | 🔜 | Use Terraform | `infra`, `devops` | ARM Templates are a good solution to automate Azure infrastructure, but we now use more providers. Terraform is a good candidate to automate more infrastructure as GitHub and AWS. |
 | 🔜 | Use AWS | `infra`, `devops` | AWS proposes more features for native serverless applications, with AWS Lambda. We should automate one Function deployment to evaluate AWS against Azure. |
 
@@ -70,7 +72,7 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Separate finance from *milochau.com* | `infra`, `microservices`, `business` | Finance is a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `finance` application as an Azure Functions / Static Web Apps module. |
 | Use reusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use resuable GitHub worklows, using our centralized GitHub Actions. |
 | Use Terraform for GitHub | `infra`, `devops` | As we now use Terraform for AWS resources, we should use it to manage our GitHub repositories, instead of in-house scripts |
-| Migrate to AWS | `infra`, `devops` | If AWS is a proven way to make serverless applications better than Azure, we should migrate all our workflows. |
+| Migrate to AWS | `infra`, `devops` | If AWS is a proven way to make serverless applications better than Azure, we should migrate all our workloads. |
 
 ---
 
