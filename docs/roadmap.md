@@ -16,11 +16,14 @@ gantt
   .NET native AOT : done,       aot,        2023-01-01,               2023-01-15
 
   section Microservices
-  aws-emais       : active,     emails,     2023-01-10,               2023-03-01
-  operations      : active,     operations, 2023-01-21,               2023-03-15
+  aws-emails      : done,       emails,     2023-01-10,               2023-03-06
+  aws-operations  : done,       operations, 2023-01-21,               2023-04-07
+  aws-maps        : done,       maps,       2023-01-25,               2023-04-12
+  aws-contacts    : active,     contacts,   2023-04-13,               2023-05-01
+  aws-cv          : active,     cv,         2023-04-13,               2023-05-01
 
   section Infrastructure
-  Cognito         : done,       cognito     2023-01-01,               2023-01-10
+  Cognito         : done,       cognito,    2023-01-01,               2023-01-10
 ```
 
 ## Current quarter
@@ -29,10 +32,10 @@ gantt
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Setup AWS Cognito | `infra`, `auth` | AWS Cognito can be used to authenticate our future Lambda-based services. We should setup it, and integrate it with our Front-End libraries. |
-| ✔️ | Use native AOT for .NET | `infra`, `csharp` | New deployment models help to reduce cold start duration. We should build our Lambda-based applications as native AOT code, so we improve performances and decrease cost. |
-| 🔜 | Use AWS for emails | `infra`, `microservices` | AWS proposes integrated workflows to send emails, with SES v2. We should define a Lambda-based process and migrate from Azure. |
-| 🔜 | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as a serverless, Lambda-based application. |
+| ✔️ | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more efficient alternatives based on AWS services. |
+| 🔜 | Migrate contacts to AWS | `infra`, `microservices` | The contacts microservice is hosted on Azure. Now we want to use AWS, we should migrate to a new Lambda-based application. |
+| 🔜 | Migrate CV to AWS | `infra`, `microservices` | The CV page is hosted on Azure. Now we want to use AWS, we should migrate to a new S3-based application, using vue.js v3. |
+| | Abandon Azure | `infra`, `devops` | AWS is a proven way to make serverless applications better than Azure. We should migrate all our workloads. |
 
 ---
 
@@ -44,10 +47,8 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
-| Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more efficient alternatives based on AWS services. |
-| Setup alerts on monitoring |`infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
+| Setup alerts on monitoring | `infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 | Use reusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use reusable GitHub workflows, using our centralized GitHub Actions. |
-| Migrate to AWS | `infra`, `devops` | AWS is a proven way to make serverless applications better than Azure. We should migrate all our workloads. |
 | Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 
 ---
@@ -55,6 +56,20 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 ## Past quarters
 
 These roadmap items have been delivered, as they are now implemented.
+
+---
+
+### 2023
+
+#### 2023 Q1
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| ✔️ | Setup AWS Cognito | `infra`, `auth` | AWS Cognito can be used to authenticate our future Lambda-based services. We should setup it, and integrate it with our Front-End libraries. |
+| ✔️ | Use native AOT for .NET | `infra`, `csharp` | New deployment models help to reduce cold start duration. We should build our Lambda-based applications as native AOT code, so we improve performances and decrease cost. |
+| ✔️ | Use AWS for emails | `infra`, `microservices` | AWS proposes integrated workflows to send emails, with SES v2. We should define a Lambda-based process and migrate from Azure. |
+| ✔️ | Use AWS for maps | `infra`, `microservices` | AWS proposes efficient serverless resources, with Lambda functions, API Gateway and CloudFront. We should rework the maps microservice as a Lambda-based application, and migrate from Azure. |
+| ✔️ | Separate operations from *milochau.com* | `infra`, `microservices`, `business` | Operations are a specific business domain, today grouped in the *milochau.com* application. We should separate them, and deploy the new `operations` application as a serverless, Lambda-based application. |
 
 ---
 
@@ -70,7 +85,7 @@ gantt
   vue.js v3       : done,       vue,        2022-04-01,               2022-05-01
   vite.js         : done,       vite,       2022-04-01,               2022-05-01
   vuetify v3      : done,       vuetify,    2022-04-01,               2022-11-01
-  .NET 7          : active,     dotnet,     2022-11-05,               2022-12-01
+  .NET 7          : done,       dotnet,     2022-11-05,               2022-12-01
 
   section Microservices
   maps            : done,       maps,       2022-04-01,               2022-06-26
@@ -83,8 +98,8 @@ gantt
   Workbooks       : done,       workbooks,  2022-08-01,               2022-08-16
   Policy          : done,       policy,     2022-08-19,               2022-08-28
   Docker          : done,       docker,     2022-09-19,               2022-10-01
-  Terraform setup : active,     terraform,  2022-11-15,               2022-12-30
-  AWS setup       : active,     aws,        2022-12-13,               2022-12-31
+  Terraform setup : done,       terraform,  2022-11-15,               2022-12-30
+  AWS setup       : done,       aws,        2022-12-13,               2022-12-31
 
   section Business
   Emails tracking : done,       tracking,   2022-07-01,               2022-07-10
