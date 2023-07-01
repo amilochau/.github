@@ -19,23 +19,27 @@ gantt
   aws-emails      : done,       emails,     2023-01-10,               2023-03-06
   aws-operations  : done,       operations, 2023-01-21,               2023-04-07
   aws-maps        : done,       maps,       2023-01-25,               2023-04-12
-  aws-contacts    : active,     contacts,   2023-04-13,               2023-05-01
-  aws-cv          : active,     cv,         2023-04-13,               2023-05-01
+  aws-contacts    : done,       contacts,   2023-04-13,               2023-05-01
+  aws-cv          : done,       cv,         2023-04-13,               2023-05-01
 
   section Infrastructure
   Cognito         : done,       cognito,    2023-01-01,               2023-01-10
+  
+  section Business
+  Emails feedbacks: done,       feedbacks,  2023-05-01,               2023-05-26
+  Leaflet         : done,       leaflet,    2023-06-02,               2023-06-13
+  Web design      : active,     design,     2023-06-20,               30d
 ```
 
 ## Current quarter
 
-### 2023 Q1
+### 2023 Q3
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more efficient alternatives based on AWS services. |
-| 🔜 | Migrate contacts to AWS | `infra`, `microservices` | The contacts microservice is hosted on Azure. Now we want to use AWS, we should migrate to a new Lambda-based application. |
-| 🔜 | Migrate CV to AWS | `infra`, `microservices` | The CV page is hosted on Azure. Now we want to use AWS, we should migrate to a new S3-based application, using vue.js v3. |
-| | Abandon Azure | `infra`, `devops` | AWS is a proven way to make serverless applications better than Azure. We should migrate all our workloads. |
+| ✔️ | Icons | `web` | Our websites lack a strong UI identity. Thanks to generative AI, we can now generate icons and images more easily. |
+| 🔜 | Landing pages | `web` | External users coming to our websites can't easily understand what they can do with them. We should add landing pages to explain the main available features. |
+| 🔜 | AWS budgets | `infra`, `monitoring` | With more services hosted in AWS, we should now manage budgets to avoid surprises with consumption-based resources. |
 
 ---
 
@@ -43,7 +47,7 @@ gantt
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2023 Q2+
+### 2023 Q4+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
@@ -60,6 +64,16 @@ These roadmap items have been delivered, as they are now implemented.
 ---
 
 ### 2023
+
+#### 2023 Q2
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| ✔️ | Abandon SQL databases | `storage` | Azure SQL databases are expensive, and rarely match our needs - as we now use more hierarchical data. We should abandon SQL databases in our applications, and propose more efficient alternatives based on AWS services. |
+| ✔️ | Migrate contacts to AWS | `infra`, `microservices` | The contacts microservice is hosted on Azure. Now we want to use AWS, we should migrate to a new Lambda-based application. |
+| ✔️ | Migrate CV to AWS | `infra`, `microservices` | The CV page is hosted on Azure. Now we want to use AWS, we should migrate to a new S3-based application, using vue.js v3. |
+| ✔️ | Abandon Azure | `infra`, `devops` | AWS is a proven way to make serverless applications better than Azure. We should migrate all our workloads. |
+| ✔️ | Use Leaflet for maps | `web`, `maps` | Google Maps have poor performances and lacks important data. We should use leaflet, with OpenStreetMaps data. |
 
 #### 2023 Q1
 
