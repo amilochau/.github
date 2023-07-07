@@ -38,10 +38,10 @@ gantt
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
 | ✔️ | Icons | `web` | Our websites lack a strong UI identity. Thanks to generative AI, we can now generate icons and images more easily. |
+| ✔️ | AWS budgets | `infra`, `monitoring` | With more services hosted in AWS, we should now manage budgets to avoid surprises with consumption-based resources. |
 | 🔜 | Landing pages | `web` | External users coming to our websites can't easily understand what they can do with them. We should add landing pages to explain the main available features. |
 | 🔜 | Use AWS X-Ray | `infra`, `monitoring` | Multiple services hosted in AWS are hard to monitor, with their many dependencies. We should use AWS X-Ray. |
 | | Secure private data | `infra`, `network` | Data storages can contain sensitive data. We should add another security layer using network isolation. |
-| | AWS budgets | `infra`, `monitoring` | With more services hosted in AWS, we should now manage budgets to avoid surprises with consumption-based resources. |
 
 ---
 
@@ -56,6 +56,7 @@ These roadmap items are expected to be delivered soon. The dates indicated here 
 | Setup alerts on monitoring | `infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 | Use reusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use reusable GitHub workflows, using our centralized GitHub Actions. |
 | Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| Use local databases | `infra`, `devops` | AWS serverless services are charged on consuption. To avoid overbilling during tests, we should use local databases. |
 
 ---
 
