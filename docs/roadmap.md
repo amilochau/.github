@@ -13,35 +13,38 @@ gantt
   axisFormat %d/%m
 
   section Frameworks
-  .NET native AOT : done,       aot,        2023-01-01,               2023-01-15
+  .NET native AOT   : done,       aot,        2023-01-01,               2023-01-15
+  .NET AWS SDK      : done,       aws,        2023-10-03,               2023-10-27
+  .NET 8            : active,     net8,       2023-11-14,               2023-11-30
 
   section Microservices
-  aws-emails      : done,       emails,     2023-01-10,               2023-03-06
-  aws-operations  : done,       operations, 2023-01-21,               2023-04-07
-  aws-maps        : done,       maps,       2023-01-25,               2023-04-12
-  aws-contacts    : done,       contacts,   2023-04-13,               2023-05-01
-  aws-cv          : done,       cv,         2023-04-13,               2023-05-01
+  aws-emails        : done,       emails,     2023-01-10,               2023-03-06
+  aws-operations    : done,       operations, 2023-01-21,               2023-04-07
+  aws-maps          : done,       maps,       2023-01-25,               2023-04-12
+  aws-contacts      : done,       contacts,   2023-04-13,               2023-05-01
+  aws-cv            : done,       cv,         2023-04-13,               2023-05-01
 
   section Infrastructure
-  Cognito         : done,       cognito,    2023-01-01,               2023-01-10
+  Cognito           : done,       cognito,    2023-01-01,               2023-01-10
   
   section Business
-  Emails feedbacks: done,       feedbacks,  2023-05-01,               2023-05-26
-  Leaflet         : done,       leaflet,    2023-06-02,               2023-06-13
-  Web design      : active,     design,     2023-06-20,               30d
+  Emails feedbacks  : done,       feedbacks,  2023-05-01,               2023-05-26
+  Leaflet           : done,       leaflet,    2023-06-02,               2023-06-13
+  Web design        : done,       design,     2023-06-20,               2023-08-24
+  PWA               : done,       pwa,        2023-08-19,               2023-09-10
+  Push notifications: done,       push,       2023-10-27,               2023-11-08
 ```
 
 ## Current quarter
 
-### 2023 Q3
+### 2023 Q4
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Icons | `web` | Our websites lack a strong UI identity. Thanks to generative AI, we can now generate icons and images more easily. |
-| ✔️ | AWS budgets | `infra`, `monitoring` | With more services hosted in AWS, we should now manage budgets to avoid surprises with consumption-based resources. |
+| ✔️ | Rewrite .NET AWS SDK | `csharp`, `core` | AWS SDK is not compatible with .NET Native AOT. We should rewrite it to make it compatible, and remove obsolete features to reduce its size. |
+| ✔️ | Push notifications | `infra`, `web` | Push notifications can be used as a friendly way to communicate updates to users; we should use them, with a Lambda-based implementation using .NET Native AOT. |
+| 🔜 | Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 | 🔜 | Landing pages | `web` | External users coming to our websites can't easily understand what they can do with them. We should add landing pages to explain the main available features. |
-| 🔜 | Use AWS X-Ray | `infra`, `monitoring` | Multiple services hosted in AWS are hard to monitor, with their many dependencies. We should use AWS X-Ray. |
-| | Secure private data | `infra`, `network` | Data storages can contain sensitive data. We should add another security layer using network isolation. |
 
 ---
 
@@ -49,13 +52,14 @@ gantt
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2023 Q4+
+### 2024 Q1+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
+| Migrate to AWS Amplify SDK v6 | `web`, `core` | A new major version of AWS Amplify SDK, used for authentication with Cognito, can be used to improve performances. |
 | Setup alerts on monitoring | `infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 | Use reusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use reusable GitHub workflows, using our centralized GitHub Actions. |
-| Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| Migrate to .NET 9 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
 | Use local databases | `infra`, `devops` | AWS serverless services are charged on consuption. To avoid overbilling during tests, we should use local databases. |
 
 ---
@@ -67,6 +71,15 @@ These roadmap items have been delivered, as they are now implemented.
 ---
 
 ### 2023
+
+#### 2023 Q3
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| ✔️ | Icons | `web` | Our websites lack a strong UI identity. Thanks to generative AI, we can now generate icons and images more easily. |
+| ✔️ | AWS budgets | `infra`, `monitoring` | With more services hosted in AWS, we should now manage budgets to avoid surprises with consumption-based resources. |
+| ✔️ | Use AWS X-Ray | `infra`, `monitoring` | Multiple services hosted in AWS are hard to monitor, with their many dependencies. We should use AWS X-Ray. |
+| ✔️ | Support PWA | `web` | Our applications should benefit from service worker capabilities; we should configure them as PWA. |
 
 #### 2023 Q2
 
