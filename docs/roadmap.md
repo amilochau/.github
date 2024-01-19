@@ -13,38 +13,24 @@ gantt
   axisFormat %d/%m
 
   section Frameworks
-  .NET native AOT   : done,       aot,        2023-01-01,               2023-01-15
-  .NET AWS SDK      : done,       aws,        2023-10-03,               2023-10-27
-  .NET 8            : active,     net8,       2023-11-14,               2023-11-30
 
   section Microservices
-  aws-emails        : done,       emails,     2023-01-10,               2023-03-06
-  aws-operations    : done,       operations, 2023-01-21,               2023-04-07
-  aws-maps          : done,       maps,       2023-01-25,               2023-04-12
-  aws-contacts      : done,       contacts,   2023-04-13,               2023-05-01
-  aws-cv            : done,       cv,         2023-04-13,               2023-05-01
 
   section Infrastructure
-  Cognito           : done,       cognito,    2023-01-01,               2023-01-10
+  Landing zones     : active,       landing-zones,     2024-01-08,               2023-01-31
   
   section Business
-  Emails feedbacks  : done,       feedbacks,  2023-05-01,               2023-05-26
-  Leaflet           : done,       leaflet,    2023-06-02,               2023-06-13
-  Web design        : done,       design,     2023-06-20,               2023-08-24
-  PWA               : done,       pwa,        2023-08-19,               2023-09-10
-  Push notifications: done,       push,       2023-10-27,               2023-11-08
 ```
 
 ## Current quarter
 
-### 2023 Q4
+### 2024 Q1
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| ✔️ | Rewrite .NET AWS SDK | `csharp`, `core` | AWS SDK is not compatible with .NET Native AOT. We should rewrite it to make it compatible, and remove obsolete features to reduce its size. |
-| ✔️ | Push notifications | `infra`, `web` | Push notifications can be used as a friendly way to communicate updates to users; we should use them, with a Lambda-based implementation using .NET Native AOT. |
-| 🔜 | Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
-| 🔜 | Landing pages | `web` | External users coming to our websites can't easily understand what they can do with them. We should add landing pages to explain the main available features. |
+| 🔜 | Architect AWS with landing zones | `infra`, `devops` | We now have to support multiple organizations, with their own infrastructure. We should rework our AWS accounts to architect with landing zones. |
+| 🔜 | Configure AWS SSO | `infra`, `security` | Using AWS root accounts is a bad practices, and not the easiest way to work with multiple AWS accounts. We should setup SSO with AWS, enforce it with least privilege, and make it work with our rewritten .NET AWS SDK. |
+| 🔜 | Use GitHub repository templates | `devops` | We should define repository templates within GitHub, to help create repositories without Terraform files tracking. |
 
 ---
 
@@ -52,11 +38,10 @@ gantt
 
 These roadmap items are expected to be delivered soon. The dates indicated here are informative, and could change in the future.
 
-### 2024 Q1+
+### 2024 Q2+
 
 | Title | Tags | Comment |
 | ----- | ---- | ------- |
-| Migrate to AWS Amplify SDK v6 | `web`, `core` | A new major version of AWS Amplify SDK, used for authentication with Cognito, can be used to improve performances. |
 | Setup alerts on monitoring | `infra`, `monitoring` | Our resources are now monitored with different metrics and logs. We should configure alerts to be notified when thresholds on KPIs are met. |
 | Use reusable GitHub workflows | `devops` | Instead of re-defining workflows in each repository, we should use reusable GitHub workflows, using our centralized GitHub Actions. |
 | Migrate to .NET 9 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
@@ -71,6 +56,48 @@ These roadmap items have been delivered, as they are now implemented.
 ---
 
 ### 2023
+
+```mermaid
+gantt
+  title Roadmap
+  dateFormat YYYY-MM-DD
+  axisFormat %d/%m
+
+  section Frameworks
+  .NET native AOT   : done,       aot,         2023-01-01,               2023-01-15
+  .NET AWS SDK      : done,       aws,         2023-10-03,               2023-10-27
+  .NET 8            : done,       net8,        2023-11-14,               2023-11-30
+  JS AWS SDK v6     : done,       aws-js,      2023-11-14,               2023-11-16
+
+  section Microservices
+  aws-emails        : done,       emails,      2023-01-10,               2023-03-06
+  aws-operations    : done,       operations,  2023-01-21,               2023-04-07
+  aws-maps          : done,       maps,        2023-01-25,               2023-04-12
+  aws-contacts      : done,       contacts,    2023-04-13,               2023-05-01
+  aws-cv            : done,       cv,          2023-04-13,               2023-05-01
+
+  section Infrastructure
+  Cognito           : done,       cognito,     2023-01-01,               2023-01-10
+  
+  section Business
+  Emails feedbacks  : done,       feedbacks,   2023-05-01,               2023-05-26
+  Leaflet           : done,       leaflet,     2023-06-02,               2023-06-13
+  Web design        : done,       design,      2023-06-20,               2023-08-24
+  PWA               : done,       pwa,         2023-08-19,               2023-09-10
+  Push notifications: done,       push,        2023-10-27,               2023-11-08
+  New leaflet       : done,       new-leaflet, 2023-12-16,               2023-12-28
+```
+
+#### 2023 Q4
+
+| State | Title | Tags | Comment |
+| ----- | ----- | ---- | ------- |
+| ✔️ | Rewrite .NET AWS SDK | `csharp`, `core` | AWS SDK is not compatible with .NET Native AOT. We should rewrite it to make it compatible, and remove obsolete features to reduce its size. |
+| ✔️ | Push notifications | `infra`, `web` | Push notifications can be used as a friendly way to communicate updates to users; we should use them, with a Lambda-based implementation using .NET Native AOT. |
+| ✔️ | Migrate to .NET 8 | `csharp`, `core` | New versions for Microsoft-stack frameworks are regularly released. We should migrate our libraries and applications, and adapt our templates and workflows. |
+| ✔️ | Landing pages | `web` | External users coming to our websites can't easily understand what they can do with them. We should add landing pages to explain the main available features. |
+| Migrate to AWS Amplify SDK v6 | `web`, `core` | A new major version of AWS Amplify SDK, used for authentication with Cognito, can be used to improve performances. |
+| ✔️ | Rewrite leaflet | `web`, `maps` | Leaflet is a great library for maps, but contains outdated code, without tree-shaking and many bugs. We should write a new maps library, inspired by leaflet. |
 
 #### 2023 Q3
 
