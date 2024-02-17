@@ -19,7 +19,7 @@ Here are the main important packages, part of my projects:
 - [azure-templates](https://github.com/amilochau/azure-templates): Bicep templates (Infrastructure as Code) to deploy Azure resources
 - [tf-modules](https://github.com/amilochau/tf-modules): Terraform modules (Infrastructure as Code) to manage AWS & GitHub resources
 - [core-vue3](https://github.com/amilochau/core-vue3): vue.js v3 plugins to create UI applications with common features
-- [core-aws](https://github.com/amilochau/core-aws): NuGet packages (.NET 7) as helpers for AWS Lambda functions and AWS DynamoDB
+- [core-aws](https://github.com/amilochau/core-aws): NuGet packages (.NET 8) as helpers for AWS Lambda functions and AWS DynamoDB
 - [github-actions](https://github.com/amilochau/github-actions): custom GitHub Actions to help build and deploy applications and packages within Azure, AWS, GitHub
 
 ### Business solutions
