@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This page presents the public roadmap for the `amilochau` organization. The following items are grouped by quarter, and labeled with meta information.
+This page presents the public roadmap for the `amilochau` projects, and the `milochaucom` organization. The following items are grouped by quarter, and labeled with meta information.
 
 ---
 
@@ -13,11 +13,12 @@ gantt
   axisFormat %d/%m
 
   section Frameworks
+  AWS SSO           : done,         sso,               2024-02-01,               2024-02-24
 
   section Microservices
 
   section Infrastructure
-  Landing zones     : active,       landing-zones,     2024-01-08,               2023-01-31
+  Landing zones     : done,         landing-zones,     2024-01-08,               2023-01-29
   
   section Business
 ```
@@ -28,8 +29,8 @@ gantt
 
 | State | Title | Tags | Comment |
 | ----- | ----- | ---- | ------- |
-| 🔜 | Architect AWS with landing zones | `infra`, `devops` | We now have to support multiple organizations, with their own infrastructure. We should rework our AWS accounts to architect with landing zones. |
-| 🔜 | Configure AWS SSO | `infra`, `security` | Using AWS root accounts is a bad practices, and not the easiest way to work with multiple AWS accounts. We should setup SSO with AWS, enforce it with least privilege, and make it work with our rewritten .NET AWS SDK. |
+| ✔️ | Architect AWS with landing zones | `infra`, `devops` | We now have to support multiple organizations, with their own infrastructure. We should rework our AWS accounts to architect with landing zones. |
+| ✔️ | Configure AWS SSO | `infra`, `security` | Using AWS root accounts is a bad practices, and not the easiest way to work with multiple AWS accounts. We should setup SSO with AWS, enforce it with least privilege, and make it work with our rewritten .NET AWS SDK. |
 | 🔜 | Use GitHub repository templates | `devops` | We should define repository templates within GitHub, to help create repositories without Terraform files tracking. |
 
 ---
