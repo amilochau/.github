@@ -18,7 +18,7 @@ gantt
   section Microservices
 
   section Infrastructure
-  Landing zones     : done,         landing-zones,     2024-01-08,               2023-01-29
+  Landing zones     : done,         landing-zones,     2024-01-08,               2024-01-29
   
   section Business
 ```
