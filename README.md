@@ -54,7 +54,7 @@ You can freely contribute to this work:
 - You can open Pull Requests to propose modifications
 - You can [sponsor](https://github.com/sponsors/amilochau) the projects
 
-Feel free to push your code if you agree with publishing under the [MIT license](./LICENSE).
+Feel free to push your code if you agree with publishing under the [MIT license](./LICENSE). Please read the [code of conduct](./.github/CODE_OF_CONDUCT.md) and the [contributing guidelines](./.github/CONTRIBUTING.md) before you contribute.
 
 ## Tips
 
